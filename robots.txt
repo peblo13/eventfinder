@@ -1,18 +1,29 @@
 User-agent: *
 Allow: /
 
-# Main pages
+# Main pages - high priority
 Allow: /events-finder.html
 Allow: /index.html
+
+# Search pages for SEO
+Allow: /?search=*
+Allow: /?city=*
+Allow: /?category=*
 
 # Static assets
 Allow: /images/
 Allow: /css/
 Allow: /js/
+Allow: /ads.txt
+Allow: /sitemap.xml
 
 # Block admin/private areas (if any in future)
 Disallow: /admin/
 Disallow: /private/
+Disallow: /test*
+
+# Sitemap location
+Sitemap: https://eventfinder.fun/sitemap.xml
 Disallow: /*.log$
 Disallow: /api/keys/
 
